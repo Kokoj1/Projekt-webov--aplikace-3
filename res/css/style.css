@@ -1,3 +1,8 @@
+html,
+body{
+    margin:auto;
+    text-align:center;
+}
 #uvod{
     background-image: url("../img/71Qnhy5SJUL.jpg");
     height: 500px;
@@ -18,3 +23,66 @@
     text-align:center;
     margin-top:300px;
 }
+#vareni{
+    display: none;
+}
+#place {
+    cursor: pointer;
+    width: 300px;
+    height: 46px;
+  }
+  
+  #hhouska {
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+
+  }
+  #place2 {
+    cursor: pointer;
+    width: 300px;
+    height: 46px;
+  }
+  
+  #salat {
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+  }
+
+  #place3 {
+    cursor: pointer;
+    width: 300px;
+    height: 46px;
+  }
+  
+  #rajce {
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+
+  }
+  #place4 {
+    cursor: pointer;
+    width: 300px;
+    height: 46px;
+  }
+  
+  #maso {
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+
+  }
+  #place5 {
+    cursor: pointer;
+    width: 300px;
+    height: 46px;
+  }
+  
+  #shouska {
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+
+  }
