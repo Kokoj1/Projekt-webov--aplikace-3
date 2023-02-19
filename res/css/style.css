@@ -1,0 +1,20 @@
+#uvod{
+    background-image: url("../img/71Qnhy5SJUL.jpg");
+    height: 500px;
+    width: 1000px;
+    text-align:center;
+    margin:auto;
+}
+#burger{
+    background-image: url("../img/nastavitelny-grilovaci-rost-37-x-50-70-cm.jpg");
+    display:none; 
+    height: 1000px;
+    width: 500px;
+}
+#tlacitko{
+    display:none;
+}
+#tlacitkostart{
+    text-align:center;
+    margin-top:300px;
+}
