@@ -1,7 +1,13 @@
 html,
 body{
-    margin:auto;
-    text-align:center;
+  height:1080px;
+  width:1920px;
+  overflow: auto;
+  overflow-y: hidden;
+  background-position:center;
+  background-size: cover;
+  margin: auto;
+
 }
 #uvod{
     background-image: url("../img/71Qnhy5SJUL.jpg");
@@ -10,11 +16,23 @@ body{
     text-align:center;
     margin:auto;
 }
+#counter{
+  color:white;
+  text-align:center;
+}
+#meat{
+  background-image: url("../img/hamsir-export.png");
+  height:450px;
+  width:450px;
+  margin:auto;
+  margin-top:300px;
+}
 #burger{
-    background-image: url("../img/nastavitelny-grilovaci-rost-37-x-50-70-cm.jpg");
+    background-image: url("../img/sporák-export.png");
     display:none; 
-    height: 1000px;
-    width: 500px;
+    height:953px;
+
+
 }
 #tlacitko{
     display:none;
@@ -25,8 +43,13 @@ body{
 }
 #vareni{
     display: none;
+    margin:auto;
+    text-align: center;
+    background-image: url("../img/kuchyne.png");
+    height:80%;
+    width:100%;
 }
-#place {
+#place1 {
     cursor: pointer;
     width: 300px;
     height: 46px;
