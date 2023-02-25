@@ -1,13 +1,34 @@
 html,
 body{
-  height:1080px;
-  width:1920px;
-  overflow: auto;
-  overflow-y: hidden;
   background-position:center;
-  background-size: cover;
   margin: auto;
+  background-color: black;
+}
+#nadpis{
+  background-color:white;
+  width:500px;
+  border: 2px solid red;
+  text-align:center;
+  margin:auto;
+}
+#dale{
+  margin:auto;
+}
+#dale2{
+  margin:auto;
+}
 
+#konec{
+  margin:auto;
+  text-align:center;
+  color:black;
+  display:none;
+  height:900px;;
+  background-color:white;
+  width:1000px;
+}
+#mezera{
+  height:320px;
 }
 #uvod{
     background-image: url("../img/71Qnhy5SJUL.jpg");
@@ -22,17 +43,33 @@ body{
 }
 #meat{
   background-image: url("../img/hamsir-export.png");
-  height:450px;
-  width:450px;
+  height:400px;
+  width:390px;
   margin:auto;
   margin-top:300px;
 }
 #burger{
-    background-image: url("../img/sporák-export.png");
+  margin:auto;
+    background-image: url("../img/sporák.png");
     display:none; 
-    height:953px;
+    height:935px;
+    width:1050px;
 
 
+}
+#burger2{
+  margin:auto;
+    background-image: url("../img/sporák.png");
+    display:none; 
+    height:935px;
+    width:1050px;
+}
+#meat2{
+  background-image: url("../img/hamsir-export.png");
+  height:400px;
+  width:390px;
+  margin:auto;
+  margin-top:300px;
 }
 #tlacitko{
     display:none;
@@ -46,66 +83,165 @@ body{
     margin:auto;
     text-align: center;
     background-image: url("../img/kuchyne.png");
-    height:80%;
-    width:100%;
+    height:909px;
 }
 #place1 {
+  cursor: pointer;
+  width: 300px;
+  height: 46px;
+}
+
+#hhouska {
+  cursor: pointer;
+  width: 300px;
+  height: 40px;
+
+}
+#place2 {
+  cursor: pointer;
+  width: 300px;
+  height: 46px;
+}
+
+#salat {
+  cursor: pointer;
+  width: 300px;
+  height: 40px;
+}
+
+#place3 {
+  cursor: pointer;
+  width: 300px;
+  height: 46px;
+}
+
+#rajce {
+  cursor: pointer;
+  width: 300px;
+  height: 40px;
+
+}
+#place4 {
+  cursor: pointer;
+  width: 300px;
+  height: 46px;
+}
+
+#maso {
+  cursor: pointer;
+  width: 300px;
+  height: 40px;
+
+}
+#place5 {
+  cursor: pointer;
+  width: 300px;
+  height: 46px;
+}
+
+#shouska {
+  cursor: pointer;
+  width: 300px;
+  height: 40px;
+
+}
+  #vareni2{
+    display: none;
+    margin:auto;
+    text-align: center;
+    background-image: url("../img/kuchyne.png");
+    height:909px;
+  }
+  #place6 {
     cursor: pointer;
     width: 300px;
     height: 46px;
   }
   
-  #hhouska {
+  #hhouska1 {
     cursor: pointer;
     width: 300px;
     height: 40px;
 
   }
-  #place2 {
+
+  #place7 {
     cursor: pointer;
     width: 300px;
     height: 46px;
   }
   
-  #salat {
+  #salat1 {
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+  }
+  #salat2 {
     cursor: pointer;
     width: 300px;
     height: 40px;
   }
 
-  #place3 {
+  #place8 {
     cursor: pointer;
     width: 300px;
     height: 46px;
   }
   
-  #rajce {
+  #rajce1 {
     cursor: pointer;
     width: 300px;
     height: 40px;
 
   }
-  #place4 {
+  #place9 {
     cursor: pointer;
     width: 300px;
     height: 46px;
   }
   
-  #maso {
+  #maso1 {
     cursor: pointer;
     width: 300px;
     height: 40px;
 
   }
-  #place5 {
+  #maso2 {
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+
+  }
+  #place10 {
     cursor: pointer;
     width: 300px;
     height: 46px;
   }
   
-  #shouska {
+  #shouska1 {
     cursor: pointer;
     width: 300px;
     height: 40px;
 
+  }
+  #shouska2 {
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+
+  }
+  #place11 {
+    cursor: pointer;
+    width: 300px;
+    height: 46px;
+  }
+  #place12 {
+    cursor: pointer;
+    width: 300px;
+    height: 46px;
+  }
+  #place13 {
+    cursor: pointer;
+    width: 300px;
+    height: 46px;
   }
