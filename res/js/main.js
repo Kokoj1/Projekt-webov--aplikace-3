@@ -14,28 +14,38 @@ const vareni2 = document.getElementById("vareni2");
 const burger2 = document.getElementById("burger2");
 const counter2 = document.getElementById("counter2");
 const meat2 = document.getElementById("meat2");
+const dale3 = document.getElementById("dale3");
+const konec2 = document.getElementById("konec2");
+const konechry = document.getElementById("konechry");
+const menu = document.getElementById("menu");
 let time = 0;
 let time2 = 0;
 
+
+menu.onclick = () =>{
+  window.location.reload();
+
+}
 tlacitkostart.onclick = () => {
     uvod.style.display = "none";
 burger.style.display = "block";
 interval=setInterval(() => {
     time++;
-  counter.innerHTML = time;
-  if(time>=20){
+  if(time>20){
     meat.style.backgroundImage="url(./res/img/hamprop-export.png)";
+    counter.innerHTML="Propečené";
     meat.onclick = () => {
       burger.style.display = "none";
-      vareni.style.display = "block";
-      
-    }
-   if(time>=50){
-    burger.style.display = "none";
+      vareni.style.display = "block"; 
     }
   };
+  if(time>50){
+    burger.style.display = "none";
+    konechry.style.display="block";
+    }
 }, 1000);
 };
+
 let a=0;
 const dale = document.getElementById("dale");
 const place1 = document.getElementById("place1");
@@ -366,14 +376,22 @@ dale2.onclick = () =>{
   burger2.style.display="block";
   interval2=setInterval(() => {
       time2++;
-    counter2.innerHTML = time2;
-    if(time2>=20){
+    
+    if(time2>20){
+      counter2.innerHTML = "Propečené";
       meat2.style.backgroundImage="url(./res/img/hamprop-export.png)";
+    
       meat2.onclick = () => {
         burger2.style.display="none";
         vareni2.style.display="block";
       }
+   
      };
+     if(time>50){
+      burger2.style.display = "none";
+      konechry.style.display="block";
+      }
+     
    }, 1000);
    };
 
@@ -740,6 +758,19 @@ let currentDroppable6 = null;
       hhouska1.onmouseup = function() {
         document.removeEventListener('mousemove', onMouseMove);
         hhouska1.onmouseup = null;
+        dale3.onclick = () =>{
+          vareni2.style.display="none";
+          konec2.style.display="block";
+          hhouska1.style.display="none";
+          salat1.style.display="none";
+          rajce1.style.display="none";
+          maso1.style.display="none";
+          shouska1.style.display="none";
+          maso2.style.display="none";
+          shouska2.style.display="none";
+          salat2.style.display="none";
+         
+        }
       };
 
     };
@@ -877,7 +908,6 @@ function leaveDroppable(place13) {
 shouska2.ondragstart = function() {
   return false;
 };
-
 
 
 

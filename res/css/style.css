@@ -4,12 +4,41 @@ body{
   margin: auto;
   background-color: black;
 }
-#nadpis{
+#konechry{
   background-color:white;
-  width:500px;
+  width:1000px;
   border: 2px solid red;
   text-align:center;
   margin:auto;
+  border-radius: 50px;
+  display:none;
+}
+#tlacitkostart{
+  font-size: x-large;
+}
+#nabidka{
+  border: 2 px solid red;
+  border-radius: 50px;
+}
+#nabidka2{
+  border: 2 px solid red;
+  border-radius: 50px;
+}
+#nadpis{
+  background-color:white;
+  width:1000px;
+  border: 2px solid red;
+  text-align:center;
+  margin:auto;
+  border-radius: 50px;
+}
+#nadpis2{
+  background-color:white;
+  width:1000px;
+  border: 2px solid red;
+  text-align:center;
+  margin:auto;
+  border-radius: 50px;
 }
 #dale{
   margin:auto;
@@ -27,15 +56,28 @@ body{
   background-color:white;
   width:1000px;
 }
+#konec2{
+  margin:auto;
+  text-align:center;
+  color:black;
+  display:none;
+  height:900px;;
+  background-color:white;
+  width:1000px;
+}
 #mezera{
-  height:320px;
+  height:400px;
 }
 #uvod{
-    background-image: url("../img/71Qnhy5SJUL.jpg");
+    background-color:white;
+    font-size:xx-large;
     height: 500px;
     width: 1000px;
     text-align:center;
     margin:auto;
+    border-radius: 50px;
+    border: 5px solid red;
+  
 }
 #counter{
   color:white;
@@ -54,6 +96,8 @@ body{
     display:none; 
     height:935px;
     width:1050px;
+    color:white;
+    text-align:center;
 
 
 }
@@ -244,4 +288,11 @@ body{
     cursor: pointer;
     width: 300px;
     height: 46px;
+  }
+  #mezera2{
+    height:240px;
+  }
+  #counter2{
+    text-align:center;
+    color:white;
   }
