@@ -3,6 +3,11 @@ body{
   background-position:center;
   margin: auto;
   background-color: black;
+  font-family: font ;
+}
+#zpet{
+  margin:auto;
+  display:none;
 }
 #konechry{
   background-color:white;
@@ -48,22 +53,31 @@ body{
 }
 
 #konec{
-  margin:auto;
-  text-align:center;
-  color:black;
-  display:none;
-  height:900px;;
   background-color:white;
   width:1000px;
+  border: 2px solid red;
+  text-align:center;
+  margin:auto;
+  border-radius: 50px;
+  display:none;
+}
+#info{
+  background-color:white;
+  width:1000px;
+  border: 2px solid red;
+  text-align:center;
+  margin:auto;
+  border-radius: 50px;
+  display:none;
 }
 #konec2{
-  margin:auto;
-  text-align:center;
-  color:black;
-  display:none;
-  height:900px;;
   background-color:white;
   width:1000px;
+  border: 2px solid red;
+  text-align:center;
+  margin:auto;
+  border-radius: 50px;
+  display:none;
 }
 #mezera{
   height:400px;
@@ -71,7 +85,7 @@ body{
 #uvod{
     background-color:white;
     font-size:xx-large;
-    height: 500px;
+    height: 200px;
     width: 1000px;
     text-align:center;
     margin:auto;
@@ -296,3 +310,5 @@ body{
     text-align:center;
     color:white;
   }
+  @font-face{font-family: font;
+    src: url("../fonts/rush.ttf")}

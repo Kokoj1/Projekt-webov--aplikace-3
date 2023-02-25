@@ -18,9 +18,18 @@ const dale3 = document.getElementById("dale3");
 const konec2 = document.getElementById("konec2");
 const konechry = document.getElementById("konechry");
 const menu = document.getElementById("menu");
+const navod = document.getElementById("navod");
+const zpět = document.getElementById("zpet");
 let time = 0;
 let time2 = 0;
-
+navod.onclick = () =>{
+  uvod.style.display="none";
+  info.style.display="block";
+  zpět.style.display="block";
+}
+zpět.onclick = () => {
+  window.location.reload();
+}
 
 menu.onclick = () =>{
   window.location.reload();
@@ -37,6 +46,7 @@ interval=setInterval(() => {
     meat.onclick = () => {
       burger.style.display = "none";
       vareni.style.display = "block"; 
+      clearInterval(interval);
     }
   };
   if(time>50){
@@ -384,6 +394,7 @@ dale2.onclick = () =>{
       meat2.onclick = () => {
         burger2.style.display="none";
         vareni2.style.display="block";
+        clearInterval(interval2);
       }
    
      };
@@ -909,9 +920,27 @@ shouska2.ondragstart = function() {
   return false;
 };
 
+const info = document.getElementById("info");
 
+window.onload = async () => {
 
+  try {
+  const file = await fetch("./res/data/Jason.json");
+  const data = await file.json();
 
+  data.gameinfos.forEach((gameinfo) => {
+      info.innerHTML += `
+      <h2>1 . ${gameinfo.prvni}</h2>
+      <h2>2 . ${gameinfo.druhy}</h2>
+      <h2>3 . ${gameinfo.treti}</h2>
+      <h2>4 .${gameinfo.ctvrty}</h2>
+      <h2>5 . ${gameinfo.paty}</h2>
+      `
+  });
+  }catch (err){
+      console.log(err)
+  }
+}
 
 
 

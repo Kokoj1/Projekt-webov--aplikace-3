@@ -1,0 +1,13 @@
+{
+    "count": 1,
+    "gameinfos": [
+        {
+            "prvni":"Kliknutím na start začnete hru.",
+            "druhy":"Po nějaké době se místo slova Syrové objevý slovo Propečené. Až se toto stane, klikněte na něj. ",
+            "treti":"Poskládejte hamburger tím, že přesunete ingredience na šedivá pole, která se jim podobají.",
+            "ctvrty":" Dohráli jste první kolo. Druhé se provádí stejným způsobem",
+            "paty":"Pokud se vám podaří maso připálit, objevý se nápis Konec hry a budete muset celou hru restartovat"
+        }
+   
+    ]
+}
