@@ -4,6 +4,13 @@ body{
   margin: auto;
   background-color: black;
   font-family: font ;
+}#vyber{
+  background-color:white;
+  width:1000px;
+  border: 2px solid red;
+  text-align:center;
+  margin:auto;
+  border-radius: 50px;
 }
 #zpet{
   margin:auto;
@@ -123,9 +130,9 @@ body{
     width:1050px;
 }
 #meat2{
-  background-image: url("../img/hamsir-export.png");
+  background-image: url("../img/doubleburgersyr-export.png");
   height:400px;
-  width:390px;
+  width:700px;
   margin:auto;
   margin-top:300px;
 }

@@ -40,7 +40,7 @@ tlacitkostart.onclick = () => {
 burger.style.display = "block";
 interval=setInterval(() => {
     time++;
-  if(time>20){
+  if(time>15){
     meat.style.backgroundImage="url(./res/img/hamprop-export.png)";
     counter.innerHTML="Propečené";
     meat.onclick = () => {
@@ -49,7 +49,7 @@ interval=setInterval(() => {
       clearInterval(interval);
     }
   };
-  if(time>50){
+  if(time>30){
     burger.style.display = "none";
     konechry.style.display="block";
     }
@@ -387,9 +387,9 @@ dale2.onclick = () =>{
   interval2=setInterval(() => {
       time2++;
     
-    if(time2>20){
+    if(time2>15){
       counter2.innerHTML = "Propečené";
-      meat2.style.backgroundImage="url(./res/img/hamprop-export.png)";
+      meat2.style.backgroundImage="url(./res/img/doubleburger-export.png)";
     
       meat2.onclick = () => {
         burger2.style.display="none";
@@ -398,7 +398,7 @@ dale2.onclick = () =>{
       }
    
      };
-     if(time>50){
+     if(time2>30){
       burger2.style.display = "none";
       konechry.style.display="block";
       }
