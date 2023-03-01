@@ -99,16 +99,7 @@ shouska.onmousedown = function(event) {
       currentDroppable5 = droppableBelow5;
       if (currentDroppable5) {
         enterDroppable(currentDroppable5);
-      }
-    }
-  }
-
-  document.addEventListener('mousemove', onMouseMove);
-
-  shouska.onmouseup = function() {
-    document.removeEventListener('mousemove', onMouseMove);
-    shouska.onmouseup = null;
-    let currentDroppable4 = null;
+        let currentDroppable4 = null;
 
 maso.onmousedown = function(event) {
 
@@ -143,16 +134,7 @@ maso.onmousedown = function(event) {
       currentDroppable4 = droppableBelow4;
       if (currentDroppable4) {
         enterDroppable(currentDroppable4);
-      }
-    }
-  }
-
-  document.addEventListener('mousemove', onMouseMove);
-
-  maso.onmouseup = function() {
-    document.removeEventListener('mousemove', onMouseMove);
-    maso.onmouseup = null;
-    let currentDroppable3 = null;
+        let currentDroppable3 = null;
 
 rajce.onmousedown = function(event) {
 
@@ -187,59 +169,41 @@ rajce.onmousedown = function(event) {
       currentDroppable3 = droppableBelow3;
       if (currentDroppable3) {
         enterDroppable(currentDroppable3);
-      }
-    }
+        let currentDroppable2 = null;
+
+salat.onmousedown = function(event) {
+
+let shiftX = event.clientX -salat.getBoundingClientRect().left;
+let shiftY = event.clientY - salat.getBoundingClientRect().top;
+
+salat.style.position = 'absolute';
+salat.style.zIndex = 1000;
+document.body.append(salat);
+
+moveAt(event.pageX, event.pageY);
+
+function moveAt(pageX, pageY) {
+salat.style.left = pageX - shiftX + 'px';
+salat.style.top = pageY - shiftY + 'px';
+}
+
+function onMouseMove(event) {
+moveAt(event.pageX, event.pageY);
+
+salat.hidden = true;
+let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+salat.hidden = false;
+
+if (!elemBelow) return;
+
+let droppableBelow = elemBelow.closest('.droppable2');
+if (currentDroppable2 != droppableBelow) {
+  if (currentDroppable2) {
+    leaveDroppable(currentDroppable2);
   }
-
-  document.addEventListener('mousemove', onMouseMove);
-
-  rajce.onmouseup = function() {
-    document.removeEventListener('mousemove', onMouseMove);
-    rajce.onmouseup = null;
-    let currentDroppable2 = null;
-
-    salat.onmousedown = function(event) {
-
-  let shiftX = event.clientX -salat.getBoundingClientRect().left;
-  let shiftY = event.clientY - salat.getBoundingClientRect().top;
-
-  salat.style.position = 'absolute';
-  salat.style.zIndex = 1000;
-  document.body.append(salat);
-
-  moveAt(event.pageX, event.pageY);
-
-  function moveAt(pageX, pageY) {
-    salat.style.left = pageX - shiftX + 'px';
-    salat.style.top = pageY - shiftY + 'px';
-  }
-
-  function onMouseMove(event) {
-    moveAt(event.pageX, event.pageY);
-
-    salat.hidden = true;
-    let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
-    salat.hidden = false;
-
-    if (!elemBelow) return;
-
-    let droppableBelow = elemBelow.closest('.droppable2');
-    if (currentDroppable2 != droppableBelow) {
-      if (currentDroppable2) {
-        leaveDroppable(currentDroppable2);
-      }
-      currentDroppable2 = droppableBelow;
-      if (currentDroppable2) {
-        enterDroppable(currentDroppable2);
-      }
-    }
-  }
-
-  document.addEventListener('mousemove', onMouseMove);
-
-  salat.onmouseup = function() {
-    document.removeEventListener('mousemove', onMouseMove);
-    salat.onmouseup = null;
+  currentDroppable2 = droppableBelow;
+  if (currentDroppable2) {
+    enterDroppable(currentDroppable2);
     let currentDroppable = null;
     hhouska.onmousedown = function(event) {
 
@@ -274,7 +238,16 @@ rajce.onmousedown = function(event) {
           currentDroppable = droppableBelow;
           if (currentDroppable) {
             enterDroppable(currentDroppable);
-
+            nav.innerHTML="Klikni na tlačítko dále"
+            dale.onclick = () => {
+              vareni.style.display="none";
+              hhouska.style.display="none";
+              salat.style.display="none";
+              rajce.style.display="none";
+              maso.style.display="none";
+              shouska.style.display="none";
+              konec.style.display="block";
+            }
           }
         }
       }
@@ -284,103 +257,81 @@ rajce.onmousedown = function(event) {
       hhouska.onmouseup = function() {
         document.removeEventListener('mousemove', onMouseMove);
         hhouska.onmouseup = null;
-        nav.innerHTML="Klikni na tlačítko dále"
-        dale.onclick = () => {
-          vareni.style.display="none";
-          hhouska.style.display="none";
-          salat.style.display="none";
-          rajce.style.display="none";
-          maso.style.display="none";
-          shouska.style.display="none";
-          konec.style.display="block";
-        }
       };
 
     };
 
-    function enterDroppable(place1) {
-      place1.style.background = 'lightgreen';
-
-    }
-
-    function leaveDroppable(place1) {
-      place1.style.background = '';
-
-    }
-
     hhouska.ondragstart = function() {
       return false;
     };
+  }
+}
+}
 
-  };
+document.addEventListener('mousemove', onMouseMove);
+
+salat.onmouseup = function() {
+document.removeEventListener('mousemove', onMouseMove);
+salat.onmouseup = null;
+};
 
 };
 
-function enterDroppable(place2) {
-  place2.style.background = 'lightgreen';
-
-
-}
-
-function leaveDroppable(place2) {
-  place2.style.background = '';
-
-}
 
 salat.ondragstart = function() {
-  return false;
+return false;
 };
+      }
+    }
+  }
 
+  document.addEventListener('mousemove', onMouseMove);
+
+  rajce.onmouseup = function() {
+    document.removeEventListener('mousemove', onMouseMove);
+    rajce.onmouseup = null;
   };
 
 };
 
-function enterDroppable(place3) {
-  place3.style.background = 'lightgreen';
-
-}
-
-function leaveDroppable(place3) {
-  place3.style.background = '';
-
-}
 
 rajce.ondragstart = function() {
   return false;
 };
+      }
+    }
+  }
+
+  document.addEventListener('mousemove', onMouseMove);
+
+  maso.onmouseup = function() {
+    document.removeEventListener('mousemove', onMouseMove);
+    maso.onmouseup = null;
   };
 
 };
 
-function enterDroppable(place4) {
-  place4.style.background = 'lightgreen';
-
-}
-
-function leaveDroppable(place4) {
-  place4.style.background = '';
-
-}
 
 maso.ondragstart = function() {
   return false;
 };
-  };
+      }
+    }
+  }
 
+  document.addEventListener('mousemove', onMouseMove);
+
+  shouska.onmouseup = function() {
+    document.removeEventListener('mousemove', onMouseMove);
+    shouska.onmouseup = null;
 };
-function enterDroppable(place5) {
-  place5.style.background = 'lightgreen';
+};
 
-}
-
-function leaveDroppable(place5) {
-  place5.style.background = '';
-
-}
 
 shouska.ondragstart = function() {
   return false;
 };
+
 dale2.onclick = () =>{
   konec.style.display="none";
   burger2.style.display="block";
@@ -920,6 +871,8 @@ shouska2.ondragstart = function() {
   return false;
 };
 
+
+
 const info = document.getElementById("info");
 
 window.onload = async () => {
@@ -941,18 +894,3 @@ window.onload = async () => {
       console.log(err)
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
