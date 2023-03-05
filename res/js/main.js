@@ -20,6 +20,9 @@ const konechry = document.getElementById("konechry");
 const menu = document.getElementById("menu");
 const navod = document.getElementById("navod");
 const zpět = document.getElementById("zpet");
+const vyber = document.getElementById("vyber");
+const vyber2 = document.getElementById("vyber2");
+
 let time = 0;
 let time2 = 0;
 navod.onclick = () =>{
@@ -238,7 +241,8 @@ if (currentDroppable2 != droppableBelow) {
           currentDroppable = droppableBelow;
           if (currentDroppable) {
             enterDroppable(currentDroppable);
-            nav.innerHTML="Klikni na tlačítko dále"
+            nav.innerHTML="Klikni na tlačítko dále";
+            vyber.style.display="none";
             dale.onclick = () => {
               vareni.style.display="none";
               hhouska.style.display="none";
@@ -247,6 +251,7 @@ if (currentDroppable2 != droppableBelow) {
               maso.style.display="none";
               shouska.style.display="none";
               konec.style.display="block";
+              
             }
           }
         }
@@ -720,6 +725,7 @@ let currentDroppable6 = null;
       hhouska1.onmouseup = function() {
         document.removeEventListener('mousemove', onMouseMove);
         hhouska1.onmouseup = null;
+        vyber2.style.display="none";
         dale3.onclick = () =>{
           vareni2.style.display="none";
           konec2.style.display="block";

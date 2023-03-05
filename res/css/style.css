@@ -12,6 +12,14 @@ body{
   margin:auto;
   border-radius: 50px;
 }
+#vyber2{
+  background-color:white;
+  width:1000px;
+  border: 2px solid red;
+  text-align:center;
+  margin:auto;
+  border-radius: 50px;
+}
 #zpet{
   margin:auto;
   display:none;
